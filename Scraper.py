@@ -1,15 +1,13 @@
 import os
-from urllib import request
-
-
 import time
-
-
-# find link element 
-
-# get download link
-download_link='https://www.data.gouv.fr/fr/datasets/r/8597b9e5-162b-472a-a27e-fe1b25eb0c35'
-
-destination_filename=os.path.join(os.curdir,"Candidates_data.xlsx")
+import pandas as pd
+import numpy as np
+from urllib import request
+download_link='https://www.data.gouv.fr/fr/datasets/r/3cf49bf4-c171-4328-b002-fea995cb85d8'
+# download the data to the folder Data_First_Round
+destination_filename=os.path.join(os.curdir,"Data_First_Round","Candidates_data.xlsx")
 response=request.urlretrieve(download_link,destination_filename)
-time.sleep(3)
+
+
+
+
